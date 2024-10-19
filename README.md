@@ -65,4 +65,6 @@ You’ve successfully dockerized a Laravel application using Docker Compose with
 
 This setup can easily be scaled and adapted for development and production environments. Let me know if you need any further clarification!
 
+LinkedIn: https://www.linkedin.com/in/noman-nayyar
+
 
