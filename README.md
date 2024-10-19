@@ -6,10 +6,12 @@ A Complete Guide to containerize Laravel Application using Docker And Docker Com
 
 Step 1: Create a Laravel Project
 If you already have a Laravel project, you can skip this step. Otherwise, create a new Laravel project using Composer:
-composer create-project --prefer-dist laravel/laravel laravel-app
+
+	composer create-project --prefer-dist laravel/laravel laravel-app
 
 Navigate into the Laravel project directory:
-cd laravel-app
+	
+ 	cd laravel-app
 
 Step 2: Create a Dockerfile
 In the root of your Laravel application, create a Dockerfile to define the environment for Laravel:
@@ -20,15 +22,16 @@ In the root directory of your Laravel application, create a docker-compose.yml f
 Step 4: Create Nginx Configuration File
 Create the nginx.conf file in a new nginx directory at the root of your Laravel project:
 
-Step 7: Build and Run the Docker Containers
-docker-compose up --build
+Step 5: Build and Run the Docker Containers
+
+	docker-compose up --build
 
 This will:
 
 	•	Build the Laravel app using the Dockerfile.
 	•	Start MySQL, Nginx, and phpMyAdmin services.
 
- Step 8: Access Your Application
+ Step 6: Access Your Application
 
 Once the containers are running, you can access:
 
@@ -39,13 +42,15 @@ Use the following credentials to log in to phpMyAdmin:
 	•	Username: root
 	•	Password: rootpassword
 
-Step 9: Run Laravel Migrations
+Step 7: Run Laravel Migrations
 
 After starting the containers, run the Laravel migrations to create the necessary database tables:
-docker-compose exec app php artisan migrate
 
-Step 10: Stop the Containers
-docker-compose down
+	docker-compose exec app php artisan migrate
+
+Step 8: Stop the Containers
+
+	docker-compose down
 
 This will stop and remove all containers, networks, and volumes.
 
